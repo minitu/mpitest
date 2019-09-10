@@ -131,7 +131,7 @@ int main(int argc, char** argv) {
 #endif
 
   printf("[Rank %d] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
-      rank, comp_time / n_iters * 10e6, comm_time / n_iters * 10e6, (MPI_Wtime() - total_time_start) * 10e6);
+      rank, comp_time / n_iters * 1000000, comm_time / n_iters * 1000000, (MPI_Wtime() - total_time_start) * 1000000);
 
   MPI_Finalize();
 
