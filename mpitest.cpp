@@ -76,8 +76,13 @@ int main(int argc, char** argv) {
   }
 #endif
 
+  double total_time_start = MPI_Wtime();
+
   for (int i = 0; i < n_iters; i++) {
     comp_time_start = MPI_Wtime();
+#if USE_SCOREP
+    SCOREP_USER_REGION_BY_NAME_BEGIN("TRACER_WallTime_Comp", SCOREP_USER_REGION_TYPE_COMMON);
+#endif
 
     // Some local computation
     for (int j = 0; j < vector_size; j++) {
@@ -86,11 +91,17 @@ int main(int argc, char** argv) {
     }
 
     comp_time += MPI_Wtime() - comp_time_start;
+#if USE_SCOREP
+    SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comp");
+#endif
 
     MPI_Barrier(MPI_COMM_WORLD);
     MPI_Barrier(MPI_COMM_WORLD);
 
     comm_time_start = MPI_Wtime();
+#if USE_SCOREP
+    SCOREP_USER_REGION_BY_NAME_BEGIN("TRACER_WallTime_Comm", SCOREP_USER_REGION_TYPE_COMMON);
+#endif
 
     // MPI communication
     int peer;
@@ -106,6 +117,9 @@ int main(int argc, char** argv) {
     }
 
     comm_time += MPI_Wtime() - comm_time_start;
+#if USE_SCOREP
+    SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comm");
+#endif
   }
 
 #if USE_SCOREP
@@ -116,7 +130,8 @@ int main(int argc, char** argv) {
   SCOREP_RECORDING_OFF();
 #endif
 
-  printf("[Rank %d] comp time: %.3lf us, comm time: %.3lf us\n", rank, comp_time / n_iters * 10e6, comm_time / n_iters * 10e6);
+  printf("[Rank %d] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
+      rank, comp_time / n_iters * 10e6, comm_time / n_iters * 10e6, (MPI_Wtime() - total_time_start) * 10e6);
 
   MPI_Finalize();
 
