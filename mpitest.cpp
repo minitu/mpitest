@@ -5,6 +5,7 @@
 #include <math.h>
 #include <time.h>
 
+#define USE_BARRIER 0
 #define USE_SCOREP 1
 
 #if USE_SCOREP
@@ -14,8 +15,8 @@
 int main(int argc, char** argv) {
   // Command line arguments
   int c;
-  int comm_size = 8;
-  int vector_size = 4 * 1024; // 4K elements
+  int comm_size = 1024;
+  int vector_size = 1024;
   int n_iters = 100;
   bool coll = false;
 
@@ -51,6 +52,12 @@ int main(int argc, char** argv) {
   // Check if world size is even
   if (world_size % 2 != 0) {
     if (rank == 0) printf("World size should be an even number!\n");
+    MPI_Abort(MPI_COMM_WORLD, MPI_ERR_OTHER);
+  }
+
+  // Check if comm size is smaller than vector size
+  if (vector_size < comm_size) {
+    if (rank == 0) printf("Comm size should be smaller than vector size!\n");
     MPI_Abort(MPI_COMM_WORLD, MPI_ERR_OTHER);
   }
 
@@ -95,8 +102,10 @@ int main(int argc, char** argv) {
     SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comp");
 #endif
 
+#if USE_BARRIER
     MPI_Barrier(MPI_COMM_WORLD);
     MPI_Barrier(MPI_COMM_WORLD);
+#endif
 
     comm_time_start = MPI_Wtime();
 #if USE_SCOREP
