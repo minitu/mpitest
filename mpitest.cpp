@@ -86,8 +86,8 @@ int main(int argc, char** argv) {
 
     // Some local computation
     for (int j = 0; j < vector_size; j++) {
-      a[i] = sqrt(a[i] * b[i]);
-      b[i] = a[i] / 2;
+      a[j] = sqrt(a[j] * b[j]);
+      b[j] = a[j] / 2;
     }
 
     comp_time += MPI_Wtime() - comp_time_start;
