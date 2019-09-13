@@ -5,7 +5,7 @@
 #include <math.h>
 #include <time.h>
 
-#define USE_BARRIER 0
+#define USE_BARRIER 1
 #define USE_SCOREP 1
 
 #if USE_SCOREP
