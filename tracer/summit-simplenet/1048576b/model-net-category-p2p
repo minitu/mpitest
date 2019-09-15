@@ -1,0 +1,2 @@
+lp:1	send_count:204800	send_bytes:104857600	send_time:9024000.000000	recv_count:204800	recv_bytes:104857600	recv_time:8000000.000000	max_event_size:512
+lp:3	send_count:204800	send_bytes:104857600	send_time:9024000.000000	recv_count:204800	recv_bytes:104857600	recv_time:8000000.000000	max_event_size:512
