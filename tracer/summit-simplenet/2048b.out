@@ -1,6 +1,7 @@
+Bandwidth of compute node channels not specified, setting to 20.000000
 /ccs/home/jchoi/TraceR/tracer/traceR --sync=3 --nkp=16 --extramem=100000 --max-opt-lookahead=1000000 --timer-frequency=1000 --lp-io-dir=summit-simplenet/2048b -- summit-simplenet/summit.conf tracer_config scorep-2048b/traces.otf2 
 
-Sun Sep 15 18:27:51 2019
+Sun Sep 15 23:16:44 2019
 
 ROSS Version: v7.1.1-dirty
 
@@ -11,7 +12,7 @@ Trace directory is scorep-2048b/traces.otf2
 NIC num injection port not specified, setting to 1
 NIC seq delay not specified, setting to 10.000000
 NIC num copy queues not specified, setting to 1
-within node transfer per byte delay is 0.080000
+within node transfer per byte delay is 0.050000
 Found soft_delay as 100.000000
 Found nic_delay as 400.000000
 Found rdma_delay as 1000.000000
@@ -27,15 +28,15 @@ Clock Props: 1000000 1000000000 1000.000000
 ROSS Core Configuration: 
 	Total PEs                                                    6
 	Total KPs                                          [Nodes (6) x KPs (16)] 96
-	Total LPs                                                   36
+	Total LPs                                                 9216
 	Simulation End Time                                3600000000000.00
 	LP-to-PE Mapping                                   model defined
 
 
 ROSS Event Memory Allocation:
-	Model events                                            101537
+	Model events                                            493217
 	Network events                                              16
-	Total events                                              1552
+	Total events                                            393232
 
 *** START PARALLEL OPTIMISTIC SIMULATION WITH SUSPEND LP FEATURE ***
 
@@ -851,7 +852,7 @@ AVL tree size: 0
 
 Job[0]PE[0]: FINALIZE in 0.001932 seconds.
 
-	: Running Time = 0.0111 seconds
+	: Running Time = 0.0118 seconds
 
 TW Library Statistics:
 	Total Events Processed                                    9414
@@ -871,13 +872,13 @@ TW Library Statistics:
 	Total GVT Computations                                      37
 
 	Net Events Processed                                      9414
-	Event Rate (events/sec)                               851406.3
+	Event Rate (events/sec)                               794564.5
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
-	Events Allocated                                        101553
-	Memory Allocated                                         84148
-	Memory Wasted                                              645
+	Events Allocated                                        493233
+	Memory Allocated                                        338923
+	Memory Wasted                                              362
 
 TW Network Statistics:
 	Remote sends                                                 0
@@ -894,23 +895,23 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                    664
 
 TW Clock Cycle Statistics (MAX values in secs at 0.5120 GHz):
-	Initialization                                          0.1979
-	Priority Queue (enq/deq)                                0.0015
+	Initialization                                          0.3291
+	Priority Queue (enq/deq)                                0.0016
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0075
+	Event Processing                                        0.0081
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
-	GVT                                                     0.0110
+	GVT                                                     0.0118
 	Fossil Collect                                          0.0006
 	Primary Rollbacks                                       0.0000
-	Network Read                                            0.0006
+	Network Read                                            0.0007
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0111
+	Total Time (Note: Using Running Time above for Speedup)      0.0118
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16
