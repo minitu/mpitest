@@ -30,6 +30,6 @@ while size <= end_size:
 
   print("Size", size)
   for rank in comp_time_sum.keys():
-    print("[Rank", str(rank) + "]", "comp:", comp_time_sum[rank] / iters, "comm:", comm_time_sum[rank] / iters)
+    print("[Rank", str(rank) + "]", "comp:", round(comp_time_sum[rank] / iters, 2), "comm:", round(comm_time_sum[rank] / iters, 2))
 
   size *= 2
