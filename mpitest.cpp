@@ -6,7 +6,7 @@
 #include <time.h>
 
 #define USE_BARRIER 1
-#define USE_SCOREP 1
+#define USE_SCOREP 0
 
 #if USE_SCOREP
 #include <scorep/SCOREP_User.h>
@@ -74,6 +74,8 @@ int main(int argc, char** argv) {
   double comm_time_start = 0.0;
   double comp_time = 0.0;
   double comm_time = 0.0;
+  double comp_time_sum = 0.0;
+  double comm_time_sum = 0.0;
 
 #if USE_SCOREP
   SCOREP_RECORDING_ON();
@@ -97,7 +99,8 @@ int main(int argc, char** argv) {
       b[j] = a[j] / 2;
     }
 
-    comp_time += MPI_Wtime() - comp_time_start;
+    comp_time = MPI_Wtime() - comp_time_start;
+    comp_time_sum += comp_time;
 #if USE_SCOREP
     SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comp");
 #endif
@@ -125,10 +128,14 @@ int main(int argc, char** argv) {
       MPI_Recv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     }
 
-    comm_time += MPI_Wtime() - comm_time_start;
+    comm_time = MPI_Wtime() - comm_time_start;
+    comm_time_sum += comm_time;
 #if USE_SCOREP
     SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comm");
 #endif
+
+    printf("[%03d][rank %d] comp time: %.3lf us, comm time: %.3lf us, iter time: %.3lf\n",
+        i, rank, comp_time * 1000000, comm_time * 1000000, (comp_time + comm_time) * 1000000);
   }
 
 #if USE_SCOREP
@@ -140,7 +147,8 @@ int main(int argc, char** argv) {
 #endif
 
   printf("[Rank %d] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
-      rank, comp_time / n_iters * 1000000, comm_time / n_iters * 1000000, (MPI_Wtime() - total_time_start) * 1000000);
+      rank, comp_time_sum / n_iters * 1000000, comm_time_sum / n_iters * 1000000,
+      (MPI_Wtime() - total_time_start) * 1000000);
 
   MPI_Finalize();
 
