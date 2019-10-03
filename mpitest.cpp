@@ -19,8 +19,9 @@ int main(int argc, char** argv) {
   int vector_size = 1024;
   int n_iters = 100;
   bool coll = false;
+  bool nonblocking = false;
 
-  while ((c = getopt(argc, argv, "s:v:i:c")) != -1) {
+  while ((c = getopt(argc, argv, "s:v:i:cn")) != -1) {
     switch (c) {
       case 's':
         comm_size = atoi(optarg);
@@ -33,6 +34,9 @@ int main(int argc, char** argv) {
         break;
       case 'c':
         coll = true;
+        break;
+      case 'n':
+        nonblocking = true;
         break;
       default:
         abort();
@@ -117,15 +121,30 @@ int main(int argc, char** argv) {
 
     // MPI communication
     int peer;
+    MPI_Request reqs[2];
     if (rank < world_size / 2) {
       peer = rank + (world_size / 2);
-      MPI_Recv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-      MPI_Send(b, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD);
+      if (!nonblocking) {
+        MPI_Recv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Send(b, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD);
+      }
+      else {
+        MPI_Irecv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, &reqs[0]);
+        MPI_Isend(b, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, &reqs[1]);
+        MPI_Waitall(2, reqs, MPI_STATUSES_IGNORE);
+      }
     }
     else {
       peer = rank - (world_size / 2);
-      MPI_Send(b, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD);
-      MPI_Recv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+      if (!nonblocking) {
+        MPI_Send(b, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD);
+        MPI_Recv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+      }
+      else {
+        MPI_Isend(b, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, &reqs[0]);
+        MPI_Irecv(a, comm_size, MPI_DOUBLE, peer, 9, MPI_COMM_WORLD, &reqs[1]);
+        MPI_Waitall(2, reqs, MPI_STATUSES_IGNORE);
+      }
     }
 
     comm_time = MPI_Wtime() - comm_time_start;
