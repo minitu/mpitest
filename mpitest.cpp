@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <math.h>
 #include <time.h>
+#include <float.h>
 
 #define USE_BARRIER 1
 #define USE_SCOREP 0
@@ -80,6 +81,8 @@ int main(int argc, char** argv) {
   double comm_time = 0.0;
   double comp_time_sum = 0.0;
   double comm_time_sum = 0.0;
+  double comp_time_min = DBL_MAX;
+  double comm_time_min = DBL_MAX;
 
 #if USE_SCOREP
   SCOREP_RECORDING_ON();
@@ -105,6 +108,7 @@ int main(int argc, char** argv) {
 
     comp_time = MPI_Wtime() - comp_time_start;
     comp_time_sum += comp_time;
+    if (comp_time < comp_time_min) comp_time_min = comp_time;
 #if USE_SCOREP
     SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comp");
 #endif
@@ -149,6 +153,7 @@ int main(int argc, char** argv) {
 
     comm_time = MPI_Wtime() - comm_time_start;
     comm_time_sum += comm_time;
+    if (comm_time < comm_time_min) comm_time_min = comm_time;
 #if USE_SCOREP
     SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comm");
 #endif
@@ -165,9 +170,13 @@ int main(int argc, char** argv) {
   SCOREP_RECORDING_OFF();
 #endif
 
-  printf("[Rank %d] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
+  printf("[Rank %d, Average] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
       rank, comp_time_sum / n_iters * 1000000, comm_time_sum / n_iters * 1000000,
       (MPI_Wtime() - total_time_start) * 1000000);
+  /*
+  printf("[Rank %d, Minimum] comp time: %.3lf us, comm time: %.3lf us, iter time: %.3lf us\n",
+      rank, comp_time_min * 1000000, comm_time_min * 1000000, (comp_time_min + comm_time_min) * 1000000);
+      */
 
   MPI_Finalize();
 
