@@ -158,8 +158,10 @@ int main(int argc, char** argv) {
     SCOREP_USER_REGION_BY_NAME_END("TRACER_WallTime_Comm");
 #endif
 
+    /*
     printf("[%03d][rank %d] comp time: %.3lf us, comm time: %.3lf us, iter time: %.3lf\n",
         i, rank, comp_time * 1000000, comm_time * 1000000, (comp_time + comm_time) * 1000000);
+        */
   }
 
 #if USE_SCOREP
@@ -170,7 +172,7 @@ int main(int argc, char** argv) {
   SCOREP_RECORDING_OFF();
 #endif
 
-  printf("[Rank %d, Average] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
+  printf("[Rank %d] comp time: %.3lf us, comm time: %.3lf us, total time: %.3lf us\n",
       rank, comp_time_sum / n_iters * 1000000, comm_time_sum / n_iters * 1000000,
       (MPI_Wtime() - total_time_start) * 1000000);
   /*
