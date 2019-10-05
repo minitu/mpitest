@@ -1,3 +1,5 @@
+#!/bin/python
+
 begin_size = 8
 end_size = 4194304
 iters = 10
