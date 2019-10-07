@@ -1,0 +1,25 @@
+app 0: ./mpitest -i 1000 
+cpu_index_using: logical
+overlapping_rs: allow
+oversubscribe_cpu: warn
+oversubscribe_gpu: allow
+oversubscribe_mem: allow
+launch_distribution: packed
+rank: 0: { host: 1; cpu: {0-3} ; mem: {0-999} } : app 0
+rank: 1: { host: 1; cpu: {8-11} ; mem: {1000-1999} } : app 0
+rank: 2: { host: 1; cpu: {16-19} ; mem: {2000-2999} } : app 0
+rank: 3: { host: 1; cpu: {24-27} ; mem: {3000-3999} } : app 0
+rank: 4: { host: 1; cpu: {32-35} ; mem: {4000-4999} } : app 0
+rank: 5: { host: 1; cpu: {40-43} ; mem: {5000-5999} } : app 0
+rank: 6: { host: 1; cpu: {48-51} ; mem: {6000-6999} } : app 0
+rank: 7: { host: 1; cpu: {56-59} ; mem: {7000-7999} } : app 0
+rank: 8: { host: 1; cpu: {64-67} ; mem: {8000-8999} } : app 0
+rank: 9: { host: 1; cpu: {88-91} ; mem: {309664-310663} } : app 0
+rank: 10: { host: 1; cpu: {96-99} ; mem: {310664-311663} } : app 0
+rank: 11: { host: 1; cpu: {104-107} ; mem: {311664-312663} } : app 0
+rank: 12: { host: 1; cpu: {112-115} ; mem: {312664-313663} } : app 0
+rank: 13: { host: 1; cpu: {120-123} ; mem: {313664-314663} } : app 0
+rank: 14: { host: 1; cpu: {128-131} ; mem: {314664-315663} } : app 0
+rank: 15: { host: 1; cpu: {136-139} ; mem: {315664-316663} } : app 0
+rank: 16: { host: 1; cpu: {144-147} ; mem: {316664-317663} } : app 0
+rank: 17: { host: 1; cpu: {152-155} ; mem: {317664-318663} } : app 0

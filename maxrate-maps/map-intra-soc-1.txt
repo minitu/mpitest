@@ -1,0 +1,9 @@
+app 0: ./mpitest -i 1000 
+cpu_index_using: logical
+overlapping_rs: allow
+oversubscribe_cpu: warn
+oversubscribe_gpu: allow
+oversubscribe_mem: allow
+launch_distribution: packed
+rank: 0: { host: 1; cpu: {0-3} ; mem: {0-999} } : app 0
+rank: 1: { host: 1; cpu: {40-43} ; mem: {5000-5999} } : app 0
