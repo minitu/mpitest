@@ -1,7 +1,7 @@
 begin_size = 8
 end_size = 4194304
 iters = 3
-p = 14
+p = 1
 
 size = begin_size
 while size <= end_size:
@@ -39,6 +39,6 @@ while size <= end_size:
       max_comp_time = comp_time_sum[rank] / iters
     if (comm_time_sum[rank] / iters) > max_comm_time:
       max_comm_time = comm_time_sum[rank] / iters
-  print("[Max]", "comp:", round(max_comp_time, 2), "comm:", round(max_comm_time, 2))
+  print("[Max, 1-way]", "comp:", round(max_comp_time, 2), "comm:", round(max_comm_time/2, 2))
 
   size *= 2
