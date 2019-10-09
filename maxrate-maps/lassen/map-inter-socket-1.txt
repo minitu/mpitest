@@ -1,0 +1,12 @@
+app 0: ./mpitest 
+cpu_index_using: logical
+overlapping_rs: warn
+skip_missing_cpu: warn
+skip_missing_gpu: allow
+skip_missing_mem: allow
+oversubscribe_cpu: warn
+oversubscribe_gpu: allow
+oversubscribe_mem: allow
+launch_distribution: cyclic
+rank: 0: { host: 1; cpu: {0-3} ; mem: {0-6536} } : app 0
+rank: 1: { host: 1; cpu: {80-83} ; mem: {130749-137285} } : app 0
