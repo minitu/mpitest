@@ -17,7 +17,7 @@ do
   while [ $iter -le $iters ]
   do
     echo "Iter $iter" >> "$bytes"b.out
-    jsrun -n2 -a1 -c1 -K2 -r2 ./mpitest -s $size -v $vector_size -i 1000 >> "$bytes"b.out
+    jsrun -n2 -a1 -c1 -K2 -r2 ../../mpitest -s $size -v $vector_size -i 1000 >> "$bytes"b.out
     ((iter = iter + 1))
   done
   ((size = size * 2))
