@@ -1,3 +1,8 @@
+#!/bin/python
+import sys
+
+folder = sys.argv[1]
+
 begin_size = 8
 end_size = 4194304
 iters = 3
@@ -5,7 +10,7 @@ p = 1
 
 size = begin_size
 while size <= end_size:
-  input_file = "p" + str(p) + "-" + str(size) + "b.out"
+  input_file = folder + "/" + "p" + str(p) + "-" + str(size) + "b.out"
   input_handle = open(input_file, "r")
 
   comp_time_sum = {}
