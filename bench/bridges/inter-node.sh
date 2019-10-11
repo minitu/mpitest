@@ -1,6 +1,16 @@
 #!/bin/bash
+#SBATCH -p GPU
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=32
+#SBATCH --gres=gpu:p100:2
+#SBATCH --time=00:30:00
+#SBATCH --job-name=maxrate
 
-iters=5
+date
+
+cd /home/jchoi157/mpitest
+
+iters=10
 size=1
 end_size=524288
 
@@ -17,8 +27,8 @@ do
   while [ $iter -le $iters ]
   do
     echo "Iter $iter" >> "$bytes"b.out
-    #export I_MPI_EAGER_THRESHOLD=65536
-    mpiexec -n 2 -ppn 1 -host gpu017,gpu019 ../../mpitest -s $size -v $vector_size -i 100 >> "$bytes"b.out
+    export I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=0
+    mpiexec -print-rank-map -n 4 -ppn 2 -genv I_MPI_DEBUG=5 ./mpitest -s $size -v $vector_size -i 1000 >> "$bytes"b.out
     ((iter = iter + 1))
   done
   ((size = size * 2))
