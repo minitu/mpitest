@@ -1,0 +1,350 @@
+Iter 1
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0xecc170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27416    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27417    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       19503    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       19504    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=126b0000-c619-b9bf-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.287 us, comm time: 3.860 us, total time: 15466.928 us
+[Rank 2] comp time: 6.300 us, comm time: 3.467 us, total time: 15626.907 us
+[Rank 1] comp time: 6.340 us, comm time: 4.501 us, total time: 16324.043 us
+[Rank 3] comp time: 6.330 us, comm time: 4.001 us, total time: 16328.812 us
+Iter 2
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x1003170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27472    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27473    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       19623    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       19624    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=4a6b0000-0aeb-d4bf-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.486 us, comm time: 4.160 us, total time: 16366.005 us
+[Rank 2] comp time: 6.314 us, comm time: 3.755 us, total time: 16537.905 us
+[Rank 1] comp time: 6.591 us, comm time: 4.622 us, total time: 16566.038 us
+[Rank 3] comp time: 6.383 us, comm time: 4.138 us, total time: 16571.999 us
+Iter 3
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x1423170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27526    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27527    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       19743    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       19744    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=806b0000-30a6-f0bf-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.343 us, comm time: 4.060 us, total time: 15534.878 us
+[Rank 2] comp time: 6.291 us, comm time: 3.675 us, total time: 15701.056 us
+[Rank 1] comp time: 6.319 us, comm time: 4.567 us, total time: 15725.851 us
+[Rank 3] comp time: 6.319 us, comm time: 4.078 us, total time: 15740.156 us
+Iter 4
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x85d170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27581    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27582    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       19864    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       19865    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=b76b0000-1d73-0cc0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.694 us, comm time: 3.868 us, total time: 16346.216 us
+[Rank 2] comp time: 6.343 us, comm time: 3.604 us, total time: 16520.023 us
+[Rank 1] comp time: 6.520 us, comm time: 4.847 us, total time: 17209.053 us
+[Rank 3] comp time: 6.348 us, comm time: 4.111 us, total time: 17215.014 us
+Iter 5
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x2269170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27635    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27636    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       19985    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       19986    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=ed6b0000-7136-28c0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.324 us, comm time: 3.778 us, total time: 15377.998 us
+[Rank 2] comp time: 6.329 us, comm time: 3.523 us, total time: 15537.977 us
+[Rank 1] comp time: 6.305 us, comm time: 4.424 us, total time: 15576.839 us
+[Rank 3] comp time: 6.313 us, comm time: 4.044 us, total time: 15583.038 us
+Iter 6
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x24a5170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27690    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27691    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       20105    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       20106    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=246c0000-f509-44c0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.318 us, comm time: 3.965 us, total time: 15671.015 us
+[Rank 2] comp time: 6.307 us, comm time: 3.605 us, total time: 15830.994 us
+[Rank 1] comp time: 6.321 us, comm time: 4.567 us, total time: 16550.779 us
+[Rank 3] comp time: 6.254 us, comm time: 4.073 us, total time: 16548.872 us
+Iter 7
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x1fb8170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27744    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27745    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       20224    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       20225    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=5a6c0000-74c0-5fc0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.307 us, comm time: 4.128 us, total time: 15393.972 us
+[Rank 2] comp time: 6.267 us, comm time: 3.497 us, total time: 15561.104 us
+[Rank 1] comp time: 6.330 us, comm time: 4.771 us, total time: 15585.899 us
+[Rank 3] comp time: 6.281 us, comm time: 4.068 us, total time: 15594.006 us
+Iter 8
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x1585170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27798    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27799    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       20345    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       20346    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=906c0000-4977-7bc0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.328 us, comm time: 4.004 us, total time: 15477.896 us
+[Rank 2] comp time: 6.454 us, comm time: 3.415 us, total time: 15646.935 us
+[Rank 1] comp time: 6.277 us, comm time: 4.683 us, total time: 16301.870 us
+[Rank 3] comp time: 6.291 us, comm time: 4.059 us, total time: 16311.169 us
+Iter 9
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0x1d97170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27853    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27854    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       20465    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       20466    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=c76c0000-6158-97c0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.599 us, comm time: 3.833 us, total time: 16055.822 us
+[Rank 2] comp time: 6.311 us, comm time: 3.467 us, total time: 16247.988 us
+[Rank 1] comp time: 6.656 us, comm time: 4.584 us, total time: 16242.981 us
+[Rank 3] comp time: 6.313 us, comm time: 4.134 us, total time: 16270.876 us
+Iter 10
+(gpu038:0,1)
+(gpu039:2,3)
+[0] MPI startup(): Multi-threaded optimized library
+[0] MPID_nem_ofi_dump_providers(): Dumping Providers(first=0xb69170 (psm2)):
+[0] MPID_nem_ofi_dump_providers():   psm2
+[0] MPID_nem_ofi_dump_providers():   verbs
+[0] MPID_nem_ofi_dump_providers():   verbs;ofi_rxm
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_dump_providers():   sockets
+[0] MPID_nem_ofi_init(): used OFI provider: psm2
+[0] MPID_nem_ofi_init(): max_buffered_send 64
+[0] MPID_nem_ofi_init(): max_msg_size 64
+[0] MPID_nem_ofi_init(): rcd switchover 32768
+[0] MPID_nem_ofi_init(): cq entries count 8
+[0] MPID_nem_ofi_init(): MPID_REQUEST_PREALLOC 128
+[3] MPI startup(): shm and ofi data transfer modes
+[1] MPI startup(): shm and ofi data transfer modes
+[2] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): shm and ofi data transfer modes
+[0] MPI startup(): Rank    Pid      Node name                   Pin cpu
+[0] MPI startup(): 0       27907    gpu038.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 1       27908    gpu038.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): 2       20585    gpu039.pvt.bridges.psc.edu  {8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31}
+[0] MPI startup(): 3       20586    gpu039.pvt.bridges.psc.edu  {0,1,2,3,4,5,6,7,16,17,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_DEBUG=5
+[0] MPI startup(): I_MPI_HYDRA_UUID=fd6c0000-340c-b3c0-a794-0500db8a0a04
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_MAP=hfi1_0:1
+[0] MPI startup(): I_MPI_INFO_NUMA_NODE_NUM=2
+[0] MPI startup(): I_MPI_PIN_MAPPING=2:0 8,1 0
+[Rank 0] comp time: 6.711 us, comm time: 3.966 us, total time: 15994.072 us
+[Rank 1] comp time: 6.560 us, comm time: 4.806 us, total time: 16844.988 us
+[Rank 2] comp time: 6.375 us, comm time: 3.442 us, total time: 16165.018 us
+[Rank 3] comp time: 6.465 us, comm time: 4.197 us, total time: 16858.101 us
