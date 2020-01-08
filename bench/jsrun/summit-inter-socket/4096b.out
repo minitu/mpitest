@@ -1,30 +1,30 @@
 Iter 1
-[Rank 0] comp time: 10.300 us, comm time: 2.798 us, total time: 15658.389 us
-[Rank 1] comp time: 8.487 us, comm time: 2.868 us, total time: 15641.908 us
+[Rank 1] comp time: 10.360 us, comm time: 4.583 us, total time: 17665.963 us
+[Rank 0] comp time: 8.493 us, comm time: 3.951 us, total time: 17552.049 us
 Iter 2
-[Rank 0] comp time: 10.339 us, comm time: 2.690 us, total time: 15908.810 us
-[Rank 1] comp time: 10.596 us, comm time: 2.715 us, total time: 15809.410 us
+[Rank 0] comp time: 8.818 us, comm time: 3.913 us, total time: 17547.922 us
+[Rank 1] comp time: 10.433 us, comm time: 4.589 us, total time: 17659.405 us
 Iter 3
-[Rank 0] comp time: 10.416 us, comm time: 2.824 us, total time: 15978.705 us
-[Rank 1] comp time: 8.488 us, comm time: 2.828 us, total time: 15791.965 us
+[Rank 0] comp time: 8.478 us, comm time: 4.067 us, total time: 15682.260 us
+[Rank 1] comp time: 8.473 us, comm time: 4.710 us, total time: 15789.349 us
 Iter 4
-[Rank 0] comp time: 10.317 us, comm time: 2.880 us, total time: 15804.160 us
-[Rank 1] comp time: 8.474 us, comm time: 2.952 us, total time: 15720.844 us
+[Rank 0] comp time: 8.518 us, comm time: 3.932 us, total time: 15631.931 us
+[Rank 1] comp time: 8.480 us, comm time: 4.533 us, total time: 15583.594 us
 Iter 5
-[Rank 1] comp time: 10.373 us, comm time: 2.708 us, total time: 15587.267 us
-[Rank 0] comp time: 10.334 us, comm time: 2.704 us, total time: 15679.120 us
+[Rank 0] comp time: 8.538 us, comm time: 3.934 us, total time: 15718.197 us
+[Rank 1] comp time: 8.486 us, comm time: 4.562 us, total time: 15819.229 us
 Iter 6
-[Rank 1] comp time: 8.556 us, comm time: 2.871 us, total time: 16064.387 us
-[Rank 0] comp time: 10.493 us, comm time: 2.853 us, total time: 15922.786 us
+[Rank 0] comp time: 8.501 us, comm time: 3.989 us, total time: 15878.498 us
+[Rank 1] comp time: 8.486 us, comm time: 4.768 us, total time: 15791.640 us
 Iter 7
-[Rank 0] comp time: 8.468 us, comm time: 2.784 us, total time: 15728.502 us
-[Rank 1] comp time: 10.429 us, comm time: 2.748 us, total time: 16014.390 us
+[Rank 0] comp time: 8.477 us, comm time: 4.039 us, total time: 15724.783 us
+[Rank 1] comp time: 8.471 us, comm time: 4.621 us, total time: 15895.372 us
 Iter 8
-[Rank 0] comp time: 8.473 us, comm time: 2.754 us, total time: 13863.232 us
-[Rank 1] comp time: 8.473 us, comm time: 2.740 us, total time: 13758.068 us
+[Rank 1] comp time: 8.477 us, comm time: 4.509 us, total time: 16635.293 us
+[Rank 0] comp time: 10.638 us, comm time: 3.323 us, total time: 16476.959 us
 Iter 9
-[Rank 1] comp time: 10.467 us, comm time: 2.856 us, total time: 15923.362 us
-[Rank 0] comp time: 8.604 us, comm time: 2.847 us, total time: 15955.962 us
+[Rank 1] comp time: 10.375 us, comm time: 4.531 us, total time: 17483.202 us
+[Rank 0] comp time: 8.483 us, comm time: 3.956 us, total time: 17467.176 us
 Iter 10
-[Rank 0] comp time: 8.488 us, comm time: 2.714 us, total time: 13854.799 us
-[Rank 1] comp time: 8.502 us, comm time: 2.739 us, total time: 13764.311 us
+[Rank 0] comp time: 8.486 us, comm time: 3.955 us, total time: 15607.553 us
+[Rank 1] comp time: 8.472 us, comm time: 4.601 us, total time: 15715.740 us
