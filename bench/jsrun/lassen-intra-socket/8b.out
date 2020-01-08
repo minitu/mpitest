@@ -1,0 +1,30 @@
+Iter 1
+[Rank 0] comp time: 8.517 us, comm time: 0.638 us, total time: 10582.930 us
+[Rank 1] comp time: 8.590 us, comm time: 0.819 us, total time: 10583.139 us
+Iter 2
+[Rank 0] comp time: 8.527 us, comm time: 0.613 us, total time: 10501.179 us
+[Rank 1] comp time: 8.501 us, comm time: 0.802 us, total time: 10501.332 us
+Iter 3
+[Rank 1] comp time: 8.497 us, comm time: 0.821 us, total time: 11197.248 us
+[Rank 0] comp time: 9.258 us, comm time: 0.630 us, total time: 11196.440 us
+Iter 4
+[Rank 1] comp time: 8.497 us, comm time: 0.821 us, total time: 10472.640 us
+[Rank 0] comp time: 8.510 us, comm time: 0.628 us, total time: 10474.180 us
+Iter 5
+[Rank 0] comp time: 8.491 us, comm time: 0.633 us, total time: 10551.617 us
+[Rank 1] comp time: 8.497 us, comm time: 0.834 us, total time: 10551.826 us
+Iter 6
+[Rank 1] comp time: 8.486 us, comm time: 0.815 us, total time: 10523.368 us
+[Rank 0] comp time: 8.497 us, comm time: 0.619 us, total time: 10523.142 us
+Iter 7
+[Rank 0] comp time: 8.492 us, comm time: 0.627 us, total time: 10551.703 us
+[Rank 1] comp time: 8.497 us, comm time: 0.826 us, total time: 10551.863 us
+Iter 8
+[Rank 1] comp time: 8.573 us, comm time: 0.804 us, total time: 10559.689 us
+[Rank 0] comp time: 8.540 us, comm time: 0.608 us, total time: 10559.495 us
+Iter 9
+[Rank 0] comp time: 8.497 us, comm time: 0.624 us, total time: 10548.539 us
+[Rank 1] comp time: 8.495 us, comm time: 0.814 us, total time: 10523.997 us
+Iter 10
+[Rank 0] comp time: 8.620 us, comm time: 0.629 us, total time: 10590.377 us
+[Rank 1] comp time: 8.506 us, comm time: 0.812 us, total time: 10590.621 us
