@@ -2,7 +2,7 @@
 
 iters=3
 p=1
-p_end=10
+p_end=2
 size=1
 end_size=524288
 
@@ -23,7 +23,7 @@ do
     while [ $iter -le $iters ]
     do
       echo "Iter $iter" >> p"$p"-"$bytes"b.out
-      jsrun --erf_input maps/map-inter-node-"$p".txt ../../mpitest -s $size -v $vector_size -i 1000 >> p"$p"-"$bytes"b.out
+      jsrun --erf_input maps/map-inter-socket-"$p".txt ../../mpitest -s $size -v $vector_size -i 1000 >> p"$p"-"$bytes"b.out
       ((iter = iter + 1))
     done
     ((size = size * 2))
