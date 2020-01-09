@@ -8,7 +8,7 @@
 
 date
 
-cd /home/jchoi157/mpitest
+cd $HOME/mpitest
 
 iters=10
 size=1
