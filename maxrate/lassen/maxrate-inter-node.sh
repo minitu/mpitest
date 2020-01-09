@@ -2,7 +2,7 @@
 
 iters=3
 p=1
-p_end=10
+p_end=4
 size=1
 end_size=524288
 
