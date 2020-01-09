@@ -27,10 +27,10 @@ def time_func_3(kn_mesh, a, b):
 p = 2
 
 ### Short
-print('### Short messages (8B - 512B)\n')
+print('### Short messages (8B - 64B)\n')
 
 # Independent variables, watch out for meshgrid parameter order
-n = np.array([8, 16, 32, 64, 128, 256, 512])
+n = np.array([8, 16, 32, 64])
 k = np.arange(p)+1
 kn_mesh = np.meshgrid(k,n)
 
@@ -42,10 +42,7 @@ for i in n:
 data = np.array([[1.34, 1.40],
   [1.60, 1.88],
   [1.52, 1.86],
-  [1.56, 1.86],
-  [2.13, 2.28],
-  [2.18, 2.37],
-  [2.31, 2.52]])
+  [1.56, 1.86]])
 print('Measured data:')
 print(data, '\n')
 
@@ -82,9 +79,9 @@ print('\n')
 
 
 ### Eager
-print('### Eager messages (1024B - 128KB)\n')
+print('### Eager messages (128B - 128KB)\n')
 
-n = np.array([1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072])
+n = np.array([128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072])
 k = np.arange(p)+1
 kn_mesh = np.meshgrid(k,n)
 
@@ -93,7 +90,10 @@ for i in n:
   for j in range(p):
     sigma = np.append(sigma, [np.sqrt(i)])
 
-data = np.array([[2.57, 2.84],
+data = np.array([[2.13, 2.28],
+  [2.18, 2.37],
+  [2.31, 2.52],
+  [2.57, 2.84],
   [3.30, 3.41],
   [4.01, 4.66],
   [6.18, 7.18],
